@@ -1,11 +1,3 @@
-.navBar {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    border: 3px solid black;
-    height: 50px;
-}
-
 .navBar a {
-    margin-left: 10px;
+    color: white;
 }

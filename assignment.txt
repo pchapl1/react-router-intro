@@ -1,3 +1,19 @@
+## High Level Instructions
+​
+1) Layout Refactor
+[x] In ./src/index.js, refactor the routes we are passing into createBrowserRouter so that the topmost route has a path of "/" and the element is <App/>. Set the child routes of this new "/" <App/> route to be <HomePage/> as the index route, <AboutPage/> as the "/about" route and <ContactPage/> as the "/contact" route.
+[x] In ./src/Pages/HomePage, ./src/Pages/AboutPage and ./src/Pages/ContactPage, remove the NavBar import and remove <NavBar/> from the JSX of each component.
+[x] In ./src/App, import the <NavBar/> component and include it in the JSX of <App/>. Additionally, import the <Outlet/> component from 'react-router-dom' and add an instance of <Outlet/> to the JSX of <App/> below <NavBar/>
+[x]- Check that the above worked by visiting every page and verifying that each one has a NavBar and is displaying the dark grey background color.
+
+
+
+
+
+
+
+
+
 A-react-router-intro pt.1
 # React-Router-Intro Assignment
 - Approach:
@@ -98,3 +114,6 @@ export default App;
 [x] Add three new text input fields in the JSX of ContactPage with accompanying state variables for firstName, lastName and email.
 [x] Add a button with the text 'Submit' to the JSX of ContactPage. Add an onClick handler that calls useNavigate with "/" passed in as the argument. [7]
 [x] If you implemented the above correctly, you should be able to visit the contact page and click the Submit button and be redirected to the Home Page.
+
+
+

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,23 +9,45 @@ import HomePage from './pages/Home';
 import ContactPage from './pages/Contact';
 import AboutPage from './pages/About';
 
-const router =  createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <HomePage/>  
-    },
-    {
-      path: "/about",
-      element: <AboutPage/>
-    },
-    {
-      path: "/contact",
-      element: <ContactPage/>
-    },
 
-  ]
-  )
+// const router =  createBrowserRouter(
+//   [
+//     {
+//       path: "/",
+//       element: <HomePage/>  
+//     },
+//     {
+//       path: "/about",
+//       element: <AboutPage/>
+//     },
+//     {
+//       path: "/contact",
+//       element: <ContactPage/>
+//     },
+
+//   ]
+//   )
+const router = createBrowserRouter([
+  {
+  path: "/",
+  element: <App />,
+  children: [
+        {
+        index: true,
+        element: <HomePage />,
+        },
+        {
+        path: "/about",
+        element: <AboutPage />,
+        },
+        {
+        path: "/contact",
+        element: <ContactPage />,
+        },
+      ],
+    },
+  ]);
+  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
